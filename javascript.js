@@ -23,7 +23,8 @@ function round(player,pc){
 }
 
 function game (){
-    for (let i=1;i<=5;i++){
+    const times=parseInt(prompt("De cuantas rondas queres que sea?"));
+    for (let i=1;i<=times;i++){
         const playerSelection = prompt("Ingrese Rock, Paper o Scissor").toUpperCase();
         console.log(round(playerSelection,getComputerChoice()));
         console.log(`Round ${i}. Pc=${pcScore} -- Player=${playerScore}`); 
