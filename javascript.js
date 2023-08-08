@@ -5,6 +5,8 @@ function getComputerChoice (){
 }
 let playerScore=0;
 let pcScore=0;
+const mostrar1=document.querySelector(".pcPuntos");
+const mostrar2=document.querySelector(".playerPuntos");
 function round(player,pc){
     if (player===pc){
         return `This round is a tie!You both chose ${player}`;
@@ -20,22 +22,45 @@ function round(player,pc){
     else{
         return "You enter an invalid option! Try again";
     }
+    
 }
 
-function game (){
-    for (let i=1;i<=5;i++){
-        const playerSelection = prompt("Ingrese Rock, Paper o Scissor").toUpperCase();
-        console.log(round(playerSelection,getComputerChoice()));
-        console.log(`Round ${i}. Pc=${pcScore} -- Player=${playerScore}`); 
-    }
-    if (pcScore>playerScore){
-        console.log("You lost the match!");
-    }
-    else if (playerScore>pcScore){
-        console.log("You won the match!");
+function ganador(){
+    if (pcScore<5 && playerScore<5){    
+        mostrar1.textContent=pcScore;
+        mostrar2.textContent=playerScore;
     }
     else{
-        console.log("The match is a tie!")
+        if(playerScore>pcScore){
+            div.textContent=`Con un resultado de ${playerScore} a ${pcScore}, usted es el ganador`;
+        }
+        else{
+            div.textContent=`Con un resultado de ${pcScore} a ${playerScore}, la maquina es la ganadora`;
+        }
+        
     }
 }
-game()
+
+const div=document.querySelector(".resultado");
+
+const rock=document.getElementById("rock");
+rock.addEventListener("click",()=>{
+    div.textContent=round("ROCK",getComputerChoice());
+    // mostrar1.textContent=pcScore;
+    // mostrar2.textContent=playerScore;
+    ganador()
+})
+
+const paper=document.getElementById("paper");
+paper.addEventListener("click",()=>{
+    div.textContent=round("PAPER",getComputerChoice());
+   ganador()
+})
+
+const scissor=document.getElementById("scissor");
+scissor.addEventListener("click",()=>{
+    div.textContent=round("SCISSOR",getComputerChoice());
+    // mostrar1.textContent=pcScore;
+    // mostrar2.textContent=playerScore;
+    ganador()
+})
