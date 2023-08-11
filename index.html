@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Welcome to rock paper scissors</h2>
+      </div>
+      <div class="game">
+        <div class="opciones">
+          <button id="ROCK"></button>
+          <button id="SCISSOR"></button>
+          <button id="PAPER"></button>
+        </div>
+        <div class="resultados">
+          <div class="resultado">res</div>
+          <div class="puntos">
+            <div class="pcPuntos"></div>
+            <div class="playerPuntos"></div>
+          </div>
 
-</head>
-<body>
-    <button id="rock">Rock</button>
-    <button id="scissor">Scissors</button>
-    <button id="paper">Paper</button>
-    <div class="cont">
-        <div class="resultado"></div>
-        <div class="pcPuntos"></div>
-        <div class="playerPuntos"></div>
+          <button id="restart">Restart</button>
+        </div>
+      </div>
+      <div class="footer">
+        All copyright correseponding this page belongs to myself
+      </div>
     </div>
-    
 
     <script src="javascript.js"></script>
-</body>
+  </body>
 </html>

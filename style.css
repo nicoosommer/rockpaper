@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: bisque;
+}
+.header {
+  text-align: center;
+  padding: 20px;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.opciones {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+#ROCK {
+  background-image: url(imgs/icons8-puño-cerrado-96.png);
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+  border-radius: 20px;
+}
+#ROCK:hover {
+  border: 5px solid black;
+  opacity: 0.9;
+}
+#PAPER {
+  background-image: url(imgs/icons8-open-hand-96.png);
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+  border-radius: 20px;
+}
+#PAPER:hover {
+  border: 5px solid black;
+  opacity: 0.9;
+}
+#SCISSOR {
+  background-image: url(imgs/icons8-tijeras-de-mano-96.png);
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+  border-radius: 20px;
+}
+#SCISSOR:hover {
+  border: 5px solid black;
+  opacity: 0.9;
+}
