@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -8,11 +11,14 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-color: bisque;
+  background-color: rgb(163, 151, 136);
 }
 .header {
   text-align: center;
-  padding: 20px;
+  padding: 50px 0px;
+  font-family: "Tilt Prism";
+  font-size: larger;
+  background-color: rgb(53, 59, 57);
 }
 .game {
   display: flex;
@@ -21,8 +27,14 @@
 }
 .opciones {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  align-items: center;
+  gap: 20px;
+}
+.restoOps {
+  display: flex;
+  gap: 60px;
 }
 #ROCK {
   background-image: url(imgs/icons8-puño-cerrado-96.png);
@@ -31,20 +43,12 @@
   width: 110px;
   border-radius: 20px;
 }
-#ROCK:hover {
-  border: 5px solid black;
-  opacity: 0.9;
-}
 #PAPER {
   background-image: url(imgs/icons8-open-hand-96.png);
   background-repeat: no-repeat;
   height: 110px;
   width: 110px;
   border-radius: 20px;
-}
-#PAPER:hover {
-  border: 5px solid black;
-  opacity: 0.9;
 }
 #SCISSOR {
   background-image: url(imgs/icons8-tijeras-de-mano-96.png);
@@ -53,7 +57,42 @@
   width: 110px;
   border-radius: 20px;
 }
+#ROCK:hover,
+#PAPER:hover,
 #SCISSOR:hover {
-  border: 5px solid black;
+  border: 10px solid rgb(80, 34, 24);
   opacity: 0.9;
+}
+.resultados,
+.resultado {
+  font-family: "Tilt prism";
+  font-weight: bold;
+  font-size: larger;
+}
+.resultados {
+  display: flex;
+  flex-direction: column;
+}
+.puntos,
+.corresponde {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* .laPc,
+.you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+.pcPuntos,
+.playerPuntos {
+  background-color: rgb(107, 103, 107);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

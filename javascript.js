@@ -10,8 +10,6 @@ const pcPuntos = document.querySelector(".pcPuntos");
 const playerPuntos = document.querySelector(".playerPuntos");
 const restart = document.getElementById("restart");
 
-pcPuntos.textContent = 0;
-playerPuntos.textContent = 0;
 function getComputerChoice() {
   return ops[Math.floor(Math.random() * ops.length)];
 }
@@ -25,13 +23,13 @@ function playRound(player, pc) {
     (player === "SCISSOR" && pc === "ROCK")
   ) {
     pcScore++;
-    pcPuntos.textContent = pcScore;
     resultado.textContent = `You lost this round! ${pc} beats ${player}`;
   } else {
     playerScore++;
-    playerPuntos.textContent = playerScore;
     resultado.textContent = `You won this round! ${player} beats ${pc}`;
   }
+  pcPuntos.textContent = pcScore;
+  playerPuntos.textContent = playerScore;
   gameFinished(playerScore, pcScore);
 }
 
@@ -49,14 +47,14 @@ function gameFinished(player, pc) {
   }
 }
 function restartGame() {
-  pcPuntos.textContent = "";
-  playerPuntos.textContent = "";
-  resultado.textContent = "";
+  pcPuntos.textContent = "?";
+  playerPuntos.textContent = "?";
+  resultado.textContent = "The game hasn't started yet!";
 }
-
+restartGame();
 function userChoice(e) {
   const eleccionJug = e.target.id;
-  console.log(playRound(eleccionJug, getComputerChoice()));
+  playRound(eleccionJug, getComputerChoice());
 }
 
 rock.addEventListener("click", userChoice);
