@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&family=Tilt+Prism&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
 
 * {
   padding: 0;
@@ -19,6 +20,7 @@
   font-family: "Tilt Prism";
   font-size: larger;
   background-color: rgb(53, 59, 57);
+  text-shadow: #fc0 1px 0 10px;
 }
 .game {
   display: flex;
@@ -62,8 +64,9 @@
 #SCISSOR:hover {
   border: 10px solid rgb(80, 34, 24);
   opacity: 0.9;
+  cursor: pointer;
 }
-.resultados,
+
 .resultado {
   font-family: "Tilt prism";
   font-weight: bold;
@@ -72,19 +75,21 @@
 .resultados {
   display: flex;
   flex-direction: column;
+  font-family: "Caprasimo", cursive;
+}
+.laPc,
+.you {
+  width: 100px;
+  text-align: center;
 }
 .puntos,
 .corresponde {
   display: flex;
   justify-content: space-evenly;
 }
-/* .laPc,
-.you {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
+.puntos {
+  font-size: xx-large;
+}
 .pcPuntos,
 .playerPuntos {
   background-color: rgb(107, 103, 107);
@@ -95,4 +100,31 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#restart {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: large;
+  font-style: italic;
+  font-family: "Caprasimo", cursive;
+  color: rgb(0, 0, 0);
+  align-self: center;
+  background-color: rgb(197, 128, 23);
+  opacity: 0.8;
+  border: 2px solid rgb(216, 216, 216);
+}
+#restart:hover {
+  border: 5px solid rgb(216, 216, 216);
+  opacity: 1;
+  cursor: pointer;
+}
+.footer {
+  font-style: italic;
+  font-weight: bold;
+}
+.footer p {
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
