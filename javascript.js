@@ -32,6 +32,28 @@ function playRound(player, pc) {
   playerPuntos.textContent = playerScore;
   gameFinished(playerScore, pcScore);
 }
+pcPuntos.textContent = pcScore;
+playerPuntos.textContent = playerScore;
+gameFinished(playerScore, pcScore);
+// =======
+// function game (){
+//     const times=parseInt(prompt("De cuantas rondas queres que sea?"));
+//     for (let i=1;i<=times;i++){
+//         const playerSelection = prompt("Ingrese Rock, Paper o Scissor").toUpperCase();
+//         console.log(round(playerSelection,getComputerChoice()));
+//         console.log(`Round ${i}. Pc=${pcScore} -- Player=${playerScore}`);
+//     }
+//     if (pcScore>playerScore){
+//         console.log("You lost the match!");
+//     }
+//     else if (playerScore>pcScore){
+//         console.log("You won the match!");
+//     }
+//     else{
+//         console.log("The match is a tie!")
+//     }
+// >>>>>>> 875fdddcf83b8ee6689135ef50ee8ff0b5c0ee61
+// }
 
 function gameFinished(player, pc) {
   if (player == 5 || pc == 5) {
